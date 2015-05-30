@@ -7,7 +7,8 @@ RUN ln -s "$(which nodejs)" /usr/bin/node
 RUN npm install -g npm bower grunt-cli gulp
 
 # copy app and install deps
-RUN npm install;bower install
+RUN npm install
+RUN bower install
 
 EXPOSE 9000
 CMD [ "node", "/server/app.js" ]
